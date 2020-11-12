@@ -1,0 +1,9 @@
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^contact/submit/$', views.contact_add, name='contact_add'),
+    url(r'^panel/message/list/$', views.contact_show, name='contact_show'),
+    url(r'^panel/message/del/(?P<pk>\d+)/$', views.contact_delete, name='contact_delete'),
+
+]
